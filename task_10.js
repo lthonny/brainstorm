@@ -7,9 +7,23 @@
 
 function deleteLetters(str) {
 	const arrayStrings = str.split('');
-	const deleteElem = arrayStrings.shift();
-	console.log(deleteElem);
-	// return arrayStrings;
+	const firstElement = arrayStrings.splice(0, 1);
+	const lastElement = arrayStrings.splice(-1, 1);
+	return arrayStrings;
 }
 
-console.log(deleteLetters('Inspirit'));
+const testCases = [
+	{ input: 'Вас3илийАа' },
+	{ input: '21Inspirit' },
+	{ input: 'nullSun213' },
+	{ input: 'алAиSsdйАа' },
+	{ input: 'В2силDий99' },
+];
+
+testCases.forEach(testCases => {
+	const { input } = testCases;
+	const removeFirstLast = deleteLetters(input);
+	console.log(`
+    input: ${input}, result: ${removeFirstLast};
+  `);
+});

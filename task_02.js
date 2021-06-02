@@ -24,8 +24,8 @@ const testCases = [
 
 testCases.forEach(testCases => {
 	const { input } = testCases;
-	const removeCharet = RemoveExclamationMarks(input);
+	const removeCharacter = RemoveExclamationMarks(input);
 	console.log(`
-    input: ${input}, result: ${removeCharet};
+    input: ${input}, result: ${removeCharacter};
   `);
 });
