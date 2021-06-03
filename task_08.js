@@ -7,7 +7,7 @@
 
 function twiceAsOld(dadYearsOld, sonYearsOld) {
 	// your code here
-	console.log(sonYearsOld - (dadYearsOld - sonYearsOld));
+	console.log(sonYearsOld * 2) - dadYearsOld;
 }
 
 console.log(twiceAsOld(55, 30));
