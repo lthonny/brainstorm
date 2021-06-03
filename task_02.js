@@ -2,7 +2,7 @@
 // * Убрать восклицательные знаки
 // Напишите функцию RemoveExclamationMarks, которая удаляет все восклицательные знаки из заданной строки.
 
-function RemoveExclamationMarks(string) {
+function removeExclamationMarks(string) {
 	const characterArray = string.split('');
 	const newArray = [];
 
@@ -15,6 +15,11 @@ function RemoveExclamationMarks(string) {
 	return newArray.join('');
 }
 
+// optimizat
+function removeExclamationMarks(s) {
+	return s.replace(/!/g, ''); // delete global sign
+}
+
 const testCases = [
 	{ input: '!hello!vasil!!' },
 	{ input: 'HELLO!!0!' },
@@ -24,7 +29,7 @@ const testCases = [
 
 testCases.forEach(testCases => {
 	const { input } = testCases;
-	const removeCharacter = RemoveExclamationMarks(input);
+	const removeCharacter = removeExclamationMarks(input);
 	console.log(`
     input: ${input}, result: ${removeCharacter};
   `);

@@ -9,7 +9,12 @@ function deleteLetters(str) {
 	const arrayStrings = str.split('');
 	const firstElement = arrayStrings.splice(0, 1);
 	const lastElement = arrayStrings.splice(-1, 1);
-	return arrayStrings;
+	return arrayStrings.join('');
+}
+
+// optimizat
+function removeChar(str) {
+	return str.slice(1, -1);
 }
 
 const testCases = [

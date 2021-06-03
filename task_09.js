@@ -6,3 +6,14 @@
 // Должно получиться так:
 // Sam Harris => S.H
 // Patrick Feeney => P.F
+
+function nameСonversion(nameAndSurname) {
+	const name = nameAndSurname.split(' ');
+	return (
+		name[0].charAt(0).toLocaleUpperCase() +
+		'.' +
+		name[1].charAt(0).toLocaleUpperCase()
+	);
+}
+
+console.log(nameСonversion('Sam Harris'));
