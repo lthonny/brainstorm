@@ -14,7 +14,7 @@ function firstNonConsecutive(arr) {
 
 console.log(firstNonConsecutive([0, 1, 2, 3, 4, 6, 7, 8, 9]));
 
-//optimaz
+//codewars
 
 function firstNonConsecutive(arr) {
 	let counter = arr[0]; //base comparison value variable
