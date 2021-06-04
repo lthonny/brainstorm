@@ -15,7 +15,7 @@ function removeExclamationMarks(string) {
 	return newArray.join('');
 }
 
-// optimizat
+// codewars
 function removeExclamationMarks(s) {
 	return s.replace(/!/g, ''); // delete global sign
 }
