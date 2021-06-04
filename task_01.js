@@ -19,6 +19,6 @@ testCases.forEach(testCases => {
 	const { quantity, data } = testCases;
 	const repeat = repeatStr(quantity, data);
 	console.log(`
-    quantity: ${quantity}, data: ${data} -- result: ${repeat};
+    quantity: ${quantity}, data: ${data} --- result: ${repeat};
   `);
 });
