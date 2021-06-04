@@ -12,7 +12,7 @@ function deleteLetters(str) {
 	return arrayStrings.join('');
 }
 
-// optimizat
+// codewars
 function removeChar(str) {
 	return str.slice(1, -1);
 }
