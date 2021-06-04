@@ -29,7 +29,7 @@ function multiplicationTable(n) {
 
 console.log(multiplicationTable(n));
 
-// codewars
+// * codewars
 const n = 5;
 
 const multiTable = n =>
