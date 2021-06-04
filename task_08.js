@@ -6,9 +6,16 @@
 // Подсчитайте, сколько лет назад отец был вдвое старше сына (или через сколько лет он будет вдвое старше).
 
 function twiceAsOld(dadYearsOld, sonYearsOld) {
-	// your code here
-	console.log(sonYearsOld * 2) - dadYearsOld;
+	const multiplicationOldSon = sonYearsOld * 2;
+	const subtraction = dadYearsOld - multiplicationOldSon;
+	return Math.abs(subtraction);
 }
 
 console.log(twiceAsOld(55, 30));
-// console.log(twiceAsOld(55, 30));
+
+// codewars
+function twiceAsOld(dadYearsOld, sonYearsOld) {
+	return Math.abs(dadYearsOld - 2 * sonYearsOld);
+}
+
+console.log(twiceAsOld(55, 30));
