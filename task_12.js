@@ -10,36 +10,49 @@
 
 function well(arr) {
 	const mergedArray = [].concat(...arr);
-	const bab = [];
-	for (let i = 0; i < mergedArray.length; i++) {
-		if (mergedArray[i] === mergedArray[i + 1]) {
-			bab.push(mergedArray[i]);
+	const arrtoUpperCase = mergedArray.map(element => {
+		if (typeof element == 'string') {
+			return element.toUpperCase();
 		}
+	});
+
+	const good = [];
+	const result = [];
+	arrtoUpperCase.forEach(element => {
+		if (element == 'GOOD') {
+			good.push(element);
+		}
+	});
+
+	if (good.length > 3) {
+		result.push('I smell a series!');
+	} else if (good.length <= 2 && good.length > 0) {
+		result.push('Publish!');
+	} else if (good.length == 0) {
+		result.push('Fail!');
 	}
-	console.log(bab);
+	console.log(result.join(''));
+	return result.join('');
 }
-// well([2, 3, 4]);
 
 well([
-	['bad', 'bAd', 'bad'], // плохо
+	['bad', 'bAd', 'bad'],
 	['bad', 'bAd', 'bad'],
 	['bad', 'bAd', 'bad'],
 ]);
 
-// well([
-// 	['gOOd', 'bAd', 'BAD', 'bad', 'bad', 'GOOD'], // Опубликовать
-// 	['bad'],
-// 	['gOOd', 'BAD'],
-// ]);
-
-// well([['gOOd', 'bAd', 'BAD', 'bad', 'bad', 'GOOD'], ['bad'], ['gOOd', 'BAD']]);  // Я чувствую запах серии!
-
-var randomArray = ['ball', 'ball', 'tree', 'ball', 'tree', 'bus', 'car'];
-var itemCount = {};
-
-randomArray.forEach(function (value) {
-	if (value in itemCount) itemCount[value] = itemCount[value] + 1;
-	else itemCount[value] = 1;
-});
-
-console.log(itemCount);
+// codewars
+function well(x) {
+	var count = 0;
+	x.forEach(function (arr) {
+		arr.forEach(function (elem) {
+			if (typeof elem === 'string' && elem.toLowerCase() === 'good') {
+				count++;
+			}
+		});
+	});
+	if (count === 0) {
+		return 'Fail!';
+	}
+	return count > 2 ? 'I smell a series!' : 'Publish!';
+}
