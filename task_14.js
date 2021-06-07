@@ -5,19 +5,25 @@
 // Массивы всегда будут содержать правильные и положительные значения, а также буквы в верхнем регистре.
 
 function arrange(arr) {
-	console.log(arr.sort());
-	const kg = [];
-	const g = [];
-	arr.forEach(element => {
-		if (element.includes('KG')) {
-			g.push(element);
-		}
-	});
-	console.log(g);
+	const sortedArray = arr.sort(
+		(a, b) =>
+			a.replace('T', '000000').replace('KG', '000').replace('G', '') -
+			b.replace('T', '000000').replace('KG', '000').replace('G', '')
+	);
+	return sortedArray;
 }
+console.log(arrange(['400G', '100T', '150KG', '100G']));
 
-console.log(arrange(['200G', '300G', '150G', '100KG']));
+// codewars
 
-// у нас есть три единицы измерения (G), (KG), (T)
-// нужно отсортировать массив по еденицам измерения
-// G > KG > T
+function arrange(arr) {
+	const sorted = w => {
+		if (w.slice(-2) === 'KG') {
+			return w.slice(0, -2) * 1;
+		} else if (w.slice(-1) === 'T') {
+			return w.slice(0, -1) * 1000;
+		} else return w.slice(0, -1) * 0.001;
+	};
+	return arr.sort((a, b) => sorted(a) - sorted(b));
+}
+console.log(arrange(['400G', '100T', '150KG', '100G']));
