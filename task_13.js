@@ -7,3 +7,13 @@
 // Например:
 // ['a','b','c'], [1,2,3]     --> ['a','b','c',1,2,3]
 // [['x','x'],'B'], ['c','D'] --> [['x','x'],'B','c','D']
+
+function appendArrays(arr1, arr2) {
+	return arr1.concat(arr2);
+}
+
+console.log(appendArrays(['this'], ['that']));
+
+// codewars
+const appendArrays = (arr1, arr2) => [...arr1, ...arr2];
+console.log(appendArrays(['this'], ['that']));
