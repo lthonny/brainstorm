@@ -52,7 +52,15 @@ function well(x) {
 		});
 	});
 	if (count === 0) {
-		return 'Fail!';
+		console.log('Fail!');
+		// return 'Fail!';
 	}
-	return count > 2 ? 'I smell a series!' : 'Publish!';
+	console.log(count > 2 ? 'I smell a series!' : 'Publish!');
+	// return count > 2 ? 'I smell a series!' : 'Publish!';
 }
+
+well([
+	['bad', 'bAd', 'bad'],
+	['bad', 'bAd', 'bad'],
+	['bad', 'bAd', 'bad'],
+]);
